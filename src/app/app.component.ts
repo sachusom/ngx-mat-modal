@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxMatModalService } from 'ngx-mat-modal';
+import { NgxMatModalService } from 'projects/ngx-mat-modal/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent {
   ) { }
 
   showMessage(): void {
-    this.modalService.showMessage('Success');
+    this.modalService.showMessage({ message: 'SuccessSuccessSuccessSuccess', title: '' });
   }
 
   confirm(): void {

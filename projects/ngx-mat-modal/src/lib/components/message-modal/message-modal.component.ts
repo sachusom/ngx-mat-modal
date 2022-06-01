@@ -11,7 +11,7 @@ export class MessageModalComponent implements OnInit {
 
   /* Public Properties */
   message: any;
-  heading: any;
+  title: any;
 
   /* Constructor */
   constructor(
@@ -36,7 +36,7 @@ export class MessageModalComponent implements OnInit {
 
   /* Private Methods */
   private initVariables(): void {
-    this.heading = this.data.heading;
+    this.title = this.data.title;
     this.message = this.data.message && this.data.message !== ''
       ? this.sanitizer.bypassSecurityTrustHtml(this.data.message)
       : 'Something went wrong.!';

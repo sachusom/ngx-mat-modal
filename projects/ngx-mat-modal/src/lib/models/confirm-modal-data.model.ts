@@ -1,4 +1,3 @@
-
 export interface ConfirmModalData {
     question: string;
     confirmBtnText: string;
