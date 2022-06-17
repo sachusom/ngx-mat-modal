@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs/internal/Observable';
 import { ConfirmModalComponent } from './components/confirm-modal/confirm-modal.component';
 import { MessageModalComponent } from './components/message-modal/message-modal.component';
 import { ConfirmModalData } from './models/confirm-modal-data.model';
@@ -18,13 +19,13 @@ export class NgxMatModalService {
   ) { }
 
   /* Public Methods */
-  showMessage(data: MessageModalData, config: MatDialogConfig<any> | null = null): any {
+  showMessage(data: MessageModalData, config: MatDialogConfig<any> | null = null): Observable<any> {
     let dialogConfig: MatDialogConfig<any> = this.checkAndSetConfig(config);
     dialogConfig.data = data;
     return this.dialog.open(MessageModalComponent, dialogConfig).afterClosed();
   }
 
-  confirm(data: ConfirmModalData, config: MatDialogConfig<any> | null = null): any {
+  confirm(data: ConfirmModalData, config: MatDialogConfig<any> | null = null): Observable<boolean> {
     let dialogConfig: MatDialogConfig<any> = this.checkAndSetConfig(config);
     dialogConfig.data = data;
     return this.dialog.open(ConfirmModalComponent, dialogConfig).afterClosed();

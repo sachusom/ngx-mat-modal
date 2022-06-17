@@ -1,14 +1,13 @@
-<button mat-icon-button class="close-button" [mat-dialog-close]="true" (click)="onClose()">
-  <mat-icon class="close-icon" color="warn">close</mat-icon>
-</button>
-
-<h1 mat-dialog-title>&nbsp;</h1>
-
-<div mat-dialog-content>
-  <p>{{view.question}}</p>
-</div>
-
-<div mat-dialog-actions>
-  <button mat-button (click)="onCancel()">{{view.cancelBtnText}}</button>
-  <button mat-raised-button color="primary" (click)="onConfirm()">{{view.confirmBtnText}}</button>
+<div class="confirm-modal-wrapper">
+  <button mat-icon-button class="close-button" [mat-dialog-close]="true" (click)="onClose()">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+  </button>
+  <h1 mat-dialog-title>&nbsp;</h1>
+  <div mat-dialog-content>
+    <p>{{view.question}}</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onCancel()">{{view.cancelBtnText}}</button>
+    <button mat-raised-button color="primary" (click)="onConfirm()">{{view.confirmBtnText}}</button>
+  </div>
 </div>

@@ -1,10 +1,12 @@
-<button mat-icon-button class="close-button" [mat-dialog-close]="true" (click)="onClose()">
-  <mat-icon class="close-icon" color="warn">close</mat-icon>
-</button>
-<h5 mat-dialog-title *ngIf="title">{{title}}</h5>
-<div mat-dialog-content>
-  <p [innerHTML]="message"></p>
-</div>
-<div mat-dialog-actions>
-  <button mat-raised-button type="button" [mat-dialog-close]="true">Ok</button>
+<div class="message-modal-wrapper">
+  <button mat-icon-button class="close-button" [mat-dialog-close]="true" (click)="onClose()">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+  </button>
+  <h5 mat-dialog-title *ngIf="title">{{title}}</h5>
+  <div mat-dialog-content>
+    <p [innerHTML]="message"></p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button type="button" [mat-dialog-close]="true">Ok</button>
+  </div>
 </div>
