@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacyDialog as MatDialog, MatLegacyDialogConfig as MatDialogConfig } from '@angular/material/legacy-dialog';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { Observable } from 'rxjs/internal/Observable';
 import { ConfirmModalComponent } from './components/confirm-modal/confirm-modal.component';
 import { MessageModalComponent } from './components/message-modal/message-modal.component';
