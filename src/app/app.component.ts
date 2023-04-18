@@ -13,7 +13,7 @@ export class AppComponent {
   ) { }
 
   showMessage(): void {
-    this.modalService.showMessage({ message: 'SuccessSuccessSuccessSuccess', title: '' });
+    this.modalService.showMessage({ message: 'Success', title: '' });
   }
 
   confirm(): void {
